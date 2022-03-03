@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+main {
+    position: relative;
+    height: 100vh;
+    background-color: #eee;
+    overflow: hidden;
+}
+main::before {
+    content: "";
+    position: absolute;
+    left: -200px;
+    width: 768px; height: 776px;
+    padding-top: 60px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-image: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+main::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: -330px;
+    width: 40%; height: 75%;
+    padding-bottom: 110px;
+    transform: rotate(180deg);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-image: linear-gradient(to top, hsla(264, 100%, 61%, 0.5), hsla(293, 100%, 63%, 0.5));
+    opacity: 0.1;
+}
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.phone {
+    position: relative;
+    width: 330px;
+    height: 650px;
+    left: -30px;
+    border-radius: 40px;
+    border: 15px solid white;
+    background-color: hsl(270, 20%, 96%);
+    box-shadow: 5px 0px 30px 2px rgba(0, 0, 0, 0.37);
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+.page-text {
+    grid-column-start: 7;
+    grid-row-start: 4;
+    z-index: 1;
+}
+.header-text {
+    font-size: 46px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: hsl(271, 36%, 24%);
+}
+.p2 {
+    width: 520px;
+    line-height: 1.8;
+    font-size: 18px;
+    word-spacing: 2px;
+    color: hsl(270, 7%, 64%);
+}
+/* Phone-Content Is Start From here */
+.phone-header {
+    position: relative;
+    width: 100%;
+    height: 16%;
+    border-radius: 28px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: linear-gradient(to top, hsla(264, 100%, 61%), hsla(293, 100%, 63%));
+    box-shadow: 0px 5px 15px 1px rgba(128, 128, 128, 0.37);
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.phone-header::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: 50%;
+    transform: translate(-50%, 0%);
+    width: 60%; height: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: white;
+}
+.ph-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ph-left {
+    display: flex;
+    align-items: center;
+}
+.ph-icon {
+    width: 25px; height: 30px;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+.ph-img {
+    width: 30px; height: 30px; border-radius: 50%;
+    border: 2px solid white;
+}
+.ph-ns {
+    margin-left: 10px;
+    line-height: 1.4;
+}
+.ph-name {
+    color: white;
+}
+.ph-state {
+    font-size: 12px;
+    word-spacing: 2px;
+    color: hsl(276, 100%, 81%);
+}
+.ph-option {
+    margin-right: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+.phone-main {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.pm-p-img {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.p-rigth {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 10px;
+    background-color: #ddd;
+    color:  hsl(276, 55%, 52%);
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+.img-left {
+    display: flex;
+    align-self: flex-end;
+}
+.img-left img {
+    width: 55px; height: 55px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+.p-left1, .p-left2 {
+    margin-top: 15px;
+    align-self: flex-end;
+    width: 45%;
+    padding: 10px;
+    font-size: 10px;
+    color: hsl(271, 15%, 43%);
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px 0px rgba(128, 128, 128, 0.198);
+}
+.p-left2 {
+    width: fit-content;
+}
+.progress {
+    display: flex;
+    color: white;
+    width: 80%;
+    box-sizing: border-box;
+    margin-top: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 4px;
+    height: 53px;
+    border-radius: 15px;
+    border-bottom-left-radius: 7px;
+    background-image: linear-gradient(to left, hsla(264, 100%, 61%), hsla(293, 100%, 63%));
+    justify-content: space-between;
+    align-items: center;
+}
+.progress-state {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ps-circle {
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.226);
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.ps-time {
+    font-size: 12px;
+}
+.progress-price {
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 13px;
+}
+.pm-input {
+    position: relative;
+    width: 100%;
+    height: 10%;
+}
+input {
+    position: absolute;
+    top:50%; left: 50%; transform: translate(-50%, -50%);
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 30px;
+    overflow: hidden;
+}
+input::placeholder {
+    color: hsl(206, 6%, 79%);
+}
+.send-btn {
+    position: absolute;
+    right: 9px;
+    top: 15px;
+    width: 35px; height: 35px; border-radius: 50%;
+    background-color: hsl(271, 36%, 24%);
+}
+.send-btn img {
+    position: absolute;
+    border: none;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-180deg);
+}
+@media screen and (max-width: 1050px) {
+    main {
+        height: fit-content;
+    }
+    main::before {
+        left: -500px;
+        padding: 0px;
+    }
+    .page {
+        height: 1100px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .phone {
+        left: 0px;
+    }
+    .page-text {
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+    .p2 {
+        width: 100%;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    main::before {
+        left: -594px;
+        height: 702px;
+    }
+    .phone {
+        width: 70%; height: 450px;
+    }
+    .phone-header {
+        padding-top: 30px;
+    }
+    .phone-header::before {
+        height: 20px;
+    }
+    .ph-content {
+        margin-top: 6px;
+    }
+    .ph-icon {
+        width: 20px; height: 20px;
+        margin-left: 10px;
+    }
+    .ph-img {
+        width: 20px; height: 20px;
+    }
+    .ph-name {
+        font-size: 12px;
+    }
+    .ph-state {
+        font-size: 10px;
+    }
+    .ph-option {
+        margin-right: 15px;
+    }
+    .p-rigth {
+        font-size: 8px;
+        margin: 5px 0px;
+    }
+    .phone-main {
+        padding: 0px 10px;
+    }
+    .img-left img{
+        width: 25px; height: 25px;
+        border-radius: 5px;
+    }
+    .p-left1 {
+        margin-top: 5px;
+        font-size: 8px;
+    }
+    .p-left2 {
+        margin-top: 5px;
+        font-size: 8px;
+    }
+    .progress {
+    width: 80%;
+    padding-left: 10px;
+    height: 100px;
+    }
+    .ps-circle {
+        width: 10px; height: 10px;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+    .ps-time {
+        font-size: 8px;
+    }
+    .progress-price {
+        font-size: 16px;
+        margin-right: 13px;
+    }
+    .pm-input input {
+        font-size: 12px;
+    }
+    .page-text {
+        padding: 12px;
+        box-sizing: border-box;
+    }
+    .header-text {
+        font-size: 36px;
+    }
+    .page-text .p2 {
+        font-size: 14px;
+    }
+    .send-btn {
+        right: 7px;
+        top: 10px;
+        width: 25px; height: 25px;
+    }
+}
