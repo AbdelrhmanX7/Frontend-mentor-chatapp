@@ -366,5 +366,7 @@ input::placeholder {
     }
 }
 @media screen and (max-width: 330px) {
-    
+    .phone {
+        width: 75%;
+    }
 }
